@@ -2,7 +2,7 @@ export const HeroPage = () => {
   return (
     <>
       <section>
-        <div className=" flex flex-col gap-10 items-center pt-[100px] pb-[70px] md:gap-10  ">
+        <div className=" flex flex-col gap-10 items-center pt-25 pb-[70px] md:gap-10  ">
           <h1 className="text-[40px] font-bold text-[#CA9C72] items-center max-md:text-[35px]  max-sm:text-[30px] max-md:py-[30px]">
             Welcome to EduShare!
           </h1>
