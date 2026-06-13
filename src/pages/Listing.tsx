@@ -16,7 +16,8 @@ export const Listing = () => {
     condition: "",
     description: "",
 
-    contact: "",
+    contactName: "",
+    contactNumber:"",
     location: "",
     meetingLocation: "",
     price: "",

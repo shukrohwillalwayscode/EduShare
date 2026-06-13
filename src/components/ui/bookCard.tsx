@@ -29,44 +29,46 @@ const BookCard = ({
     <div className="w-full h-[500px] border rounded-xl p-4 shadow-md border-[#CA9C72] overflow-hidden">
       <div className="w-full h-[220px] bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
         <img
-        loading="lazy"
+          loading="lazy"
           src={image}
           alt={title}
           className="max-h-full max-w-full object-cover"
         />
       </div>
 
-      <h2 className="font-bold text-xl mt-3">{title}</h2>
+      <h2 className="font-bold text-xl mt-3 ">{title}</h2>
 
-      <p>
-        <span className="font-bold">Category: </span>
+      <p className="">
+        <span className="font-bold text-[#CA9C72]">Category: </span>
         {category}
       </p>
 
       <p>
-        <span className="font-bold">Condition: </span>
+        <span className="font-bold text-[#CA9C72]">Condition: </span>
         {condition}
       </p>
       <p>
-        <span className="font-bold">Description:</span> {description}
+        <span className="font-bold text-[#CA9C72]">Description:</span>{" "}
+        {description}
       </p>
       <p>
-        <span className="font-bold">Contact Name: </span>
+        <span className="font-bold text-[#CA9C72]">Contact Name: </span>
         {contactName}
       </p>
       <p>
-        <span className="font-bold">Contact Number: </span>
+        <span className="font-bold text-[#CA9C72]">Contact Number: </span>
         {contactNumber}
       </p>
 
       <p>
-        <span className="font-bold">Location:</span> {location}
+        <span className="font-bold text-[#CA9C72]">Location:</span> {location}
       </p>
       <p>
-        <span className="font-bold">Meeting Location:</span> {meetingLocation}
+        <span className="font-bold text-[#CA9C72]">Meeting Location:</span>{" "}
+        {meetingLocation}
       </p>
 
-      <span className="text-blue-600">{listingType}</span>
+      <span className="text-blue-600 font-bold">{listingType}</span>
 
       {listingType === "sell" && <p>₦{price}</p>}
     </div>

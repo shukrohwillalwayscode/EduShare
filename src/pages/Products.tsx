@@ -104,7 +104,7 @@ export const Products = () => {
   console.log(filteredBooks);
 
   return (
-    <>
+    <div className="bg-blue-100">
       <NavBar
         logoImg="/Edushare logo.png"
         logoText1="Edu"
@@ -112,50 +112,49 @@ export const Products = () => {
         navlinks={navlinks}
       />
 
-      <div className="pt-32 px-10  bg-white space-y-10  bg-gray-500 ">
+      <div className="pt-32 px-10   space-y-10   ">
         <h1 className="text-6xl  font-600 text-center text-[#CA9C72] max-sm:text-3xl">
           Browse your Learning World
         </h1>
-        <p className="text-center text-2xl  max-sm:text-[18px] ">
+        <p className="text-center text-2xl  max-sm:text-[16px] md:text-[18px] ">
           Find Knowledge, Share the Wealth-Explore books for Sale or for free
           Donation
         </p>
-        
-          <p className="text-[#0d5e93] text-2xl">Find Your Next Book</p>
 
-          <div className="grid md:flex-row gap-4 mb-8 w-[80%]">
-            <Input
-              value={search}
-              placeholder="Search by title..."
-              className="border p-3 rounded-lg"
-              onChange={(e) => setSearch(e.target.value)}
-            />
+        <p className="text-[#0d5e93] text-2xl">Find Your Next Book</p>
 
-            <select
-              className="border p-3  rounded-lg"
-              onChange={(e) => setListingType(e.target.value)}
-            >
-              <option value="">All Listings</option>
+        <div className="grid md:flex-row gap-4 mb-8 w-[80%]">
+          <Input
+            value={search}
+            placeholder="Search by title..."
+            className="border p-3 rounded-lg"
+            onChange={(e) => setSearch(e.target.value)}
+          />
 
-              <option value="donate">Donation</option>
+          <select
+            className="border border-gray-300 rounded-md outline-0  p-3   hover:focus:border-blue-400"
+            onChange={(e) => setListingType(e.target.value)}
+          >
+            <option value="">All Listings</option>
 
-              <option value="sell">For Sale</option>
-            </select>
+            <option value="donate">Donation</option>
 
-            <select
-              className="border p-3 rounded-lg"
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="">All Categories</option>
+            <option value="sell">For Sale</option>
+          </select>
 
-              {categories.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-        
+          <select
+            className="border border-gray-300 rounded-md outline-0  p-3 hover:focus:border-blue-400 "
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="">All Categories</option>
+
+            {categories.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 space-y-7 space-x-7">
           {" "}
@@ -164,6 +163,6 @@ export const Products = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
