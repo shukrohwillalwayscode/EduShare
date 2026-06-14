@@ -1,3 +1,5 @@
+import { useNavigate, useParams } from "react-router-dom";
+
 type BookCardProps = {
   id: number;
   image?: string;
@@ -6,13 +8,14 @@ type BookCardProps = {
   condition: string;
   description?: string;
   contactName?: string;
-  contactNumber?: number;
+  contactNumber?: string;
   listingType: string;
   location: string;
   meetingLocation?: string;
   price?: string;
 };
 const BookCard = ({
+  id,
   image,
   title,
   category,
@@ -25,8 +28,13 @@ const BookCard = ({
   meetingLocation,
   price,
 }: BookCardProps) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="w-full h-fit border rounded-xl p-4 shadow-md border-[#CA9C72] ">
+    <div
+      className="w-full h-fit border rounded-xl p-4 shadow-md border-[#CA9C72] "
+      onClick={() => navigate(`/products/${id}`)}
+    >
       <div className="w-full h-[220px] bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
         <img
           loading="lazy"

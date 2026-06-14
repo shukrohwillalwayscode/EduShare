@@ -17,7 +17,7 @@ export const Listing = () => {
     description: "",
 
     contactName: "",
-    contactNumber:"",
+    contactNumber: "",
     location: "",
     meetingLocation: "",
     price: "",
@@ -191,14 +191,14 @@ export const Listing = () => {
             label="Contact Name"
             placeholder="Ade Eze"
             required
-            name="contact-name"
+            name="contactName"
             onChange={handleChange}
           />
           <Input
             label="Contact Number"
             placeholder="080xxxxxxx"
             required
-            name="contact"
+            name="contactNumber"
             onChange={handleChange}
           />
 
