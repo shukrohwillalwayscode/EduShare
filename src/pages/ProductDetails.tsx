@@ -84,7 +84,7 @@ const ProductDetails = () => {
         <img
           src={book.image}
           alt={book.title}
-          className="w-full h-[600px] object-contain rounded-xl"
+          className="w-full h-[500px] object-contain rounded-xl"
         />
       </div>
 
