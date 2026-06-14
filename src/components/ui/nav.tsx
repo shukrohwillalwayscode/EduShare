@@ -17,7 +17,6 @@ export const navlinks = [
   { label: "Home", href: "/" },
   { label: "Books", href: "/books" },
   { label: "MyUpload", href: "/upload" },
-  { label: "about", href: "/about" },
 ];
 
 export const NavBar = ({

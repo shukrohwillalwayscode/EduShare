@@ -26,7 +26,7 @@ const BookCard = ({
   price,
 }: BookCardProps) => {
   return (
-    <div className="w-full h-[500px] border rounded-xl p-4 shadow-md border-[#CA9C72] overflow-hidden">
+    <div className="w-full h-fit border rounded-xl p-4 shadow-md border-[#CA9C72] ">
       <div className="w-full h-[220px] bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
         <img
           loading="lazy"
