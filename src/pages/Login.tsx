@@ -8,7 +8,7 @@ import { BsMicrosoft } from "react-icons/bs";
 import { Button } from "../components/ui/button";
 import EdushareLogo from "../components/ui/EdushareLogo";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -99,7 +99,9 @@ const Login = () => {
 
             <section className="flex items-center  justify-center gap-7">
               <div className="border-t-gray-400 w-[90px] border-l-0 border-r-0 border-b-0 border-t"></div>
-              <p className="max-sm:text-[14px]">Or login in with</p>
+              <p className="max-sm:text-[14px] w-[30%] text-center">
+                Or login in with
+              </p>
               <div className="border-t-gray-400 w-[90px] border-l-0 border-r-0 border-b-0 border-t in"></div>
             </section>
 
@@ -113,10 +115,10 @@ const Login = () => {
 
             <section className="flex justify-center gap-2 items-center max-sm:  ">
               <p className="  max-sm:text-[10px] ">
-                Do you have an account?
-                <a href="/signup" className="text-blue-500 underline">
+                Do you not have an account?
+                <Link to="/signup" className="text-blue-500 underline">
                   Sign Up
-                </a>
+                </Link>
               </p>
             </section>
           </form>
