@@ -47,9 +47,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="px-[100px]  mt-6">
+      <div className="max-sm:px-1  mt-6">
         <Button children="Back" size="back" onClick={() => navigate(-1)} />
-        <div className="max-w-xl  py-30 p-6 bg-white mx-auto mt-4 bg-white ">
+        <div className="max-w-xl mx-auto py-30 p-6 bg-white max-md:w-[90%]  max-sm:w-full  max-sm:mx-[10px] mt-4  ">
           <div className="flex justify-center ">
             <EdushareLogo
               logoImg="/Edushare logo.png"
@@ -57,14 +57,14 @@ const Login = () => {
               logoText2="Share"
             />
           </div>
-          <h1 className="text-[30px] font-bold text-center m-3">
+          <h1 className="text-[40px] max-md:text-[30px] text-gray-500 font-[500] text-center m-3">
             Log in to EduShare
           </h1>
 
           <form
             action=""
             onSubmit={handleSubmit}
-            className="pt-[50px]  space-y-8 grid items-center"
+            className="  space-y-5 grid grid-cols-1  max-md:space-y-7   items-center  "
           >
             <Input
               type="email"
@@ -86,19 +86,21 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button
-              type="submit"
-              variant="access"
-              size="lg"
-              className=" mx-auto rounded-3xl bg-[#2A5A8A] py-4 text-base font-semibold text-white transition duration-200 ease-in-out hover:bg-[#2A5A8A] hover:-translate-y-0.5"
-            >
-              Sign Up
-            </Button>
+            <div className="flex justify-center">
+              <Button
+                type="submit"
+                variant="access"
+                size="lg"
+                className="   rounded-3xl bg-[#2A5A8A] py-4 text-base font-semibold text-white transition duration-200 ease-in-out hover:bg-[#2A5A8A] hover:-translate-y-0.5"
+              >
+                Sign Up
+              </Button>
+            </div>
 
             <section className="flex items-center  justify-center gap-7">
-              <div className="border-t-gray-300 w-[70px] border-l-0 border-r-0 border-b-0 border-t"></div>
-              <p>Or login in with</p>
-              <div className="border-t-gray-400 w-[70px] border-l-0 border-r-0 border-b-0 border-t in"></div>
+              <div className="border-t-gray-400 w-[90px] border-l-0 border-r-0 border-b-0 border-t"></div>
+              <p className="max-sm:text-[14px]">Or login in with</p>
+              <div className="border-t-gray-400 w-[90px] border-l-0 border-r-0 border-b-0 border-t in"></div>
             </section>
 
             <section className="flex justify-center gap-11">
