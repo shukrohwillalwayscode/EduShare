@@ -9,7 +9,7 @@ import { BsMicrosoft } from "react-icons/bs";
 
 import { Button } from "../components/ui/button";
 import EdushareLogo from "../components/ui/EdushareLogo";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -179,10 +179,10 @@ const SignUp = () => {
             <section className="text-center">
               <p>
                 Already have an account?{" "}
-                <a href="/login" className="text-blue-500 underline">
+                <Link to="/login" className="text-blue-500 underline">
                   {" "}
                   Login
-                </a>
+                </Link>
               </p>
             </section>
           </form>
