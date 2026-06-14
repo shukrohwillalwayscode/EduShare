@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "../components/ui/button";
 
 const defaultBooks = [
@@ -57,9 +57,9 @@ const defaultBooks = [
     meetingLocation: "Ilorin Mall",
   },
 ];
-
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const storedBooks = JSON.parse(localStorage.getItem("books") || "[]");
 
@@ -77,7 +77,9 @@ const ProductDetails = () => {
 
   return (
     <div className="max-w-5xl mx-auto p-8">
-      <Button size="back">Back</Button>
+      <Button size="back" onClick={() => navigate(-1)}>
+        Back
+      </Button>
       <div className="w-full bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
         <img
           src={book.image}
